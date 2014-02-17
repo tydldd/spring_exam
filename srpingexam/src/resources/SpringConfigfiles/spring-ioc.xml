@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--这个配置文件主要测试spring的DI依赖注入-->
+    <!--详细介绍IOC控制反转，并对不同类型变量初始化-->
+
+    <!--people bean-->
+    <bean id="people" class="com.ru.spring.examone.entry.People">
+        <property name="name" value="ru"/>
+    </bean>
+
+    <bean id="student" class="com.ru.spring.examone.entry.Student">
+        <property name="name" value="nan"/>
+        <property name="age" value="24" />
+        <!--<property name="date" value="2013-11-27 15:21:40"/>-->
+        <property name="array" >
+            <array value-type="java.lang.String">
+                <value>arr1</value>
+                <value>arr2</value>
+                <value>arr3</value>
+            </array>
+        </property>
+
+        <property name="list">
+            <list value-type="java.lang.String">
+                <value>list1</value>
+                <value>list2</value>
+                <!--<ref bean="people"/>-->
+            </list>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>set1</value>
+                <value>set2</value>
+                <!--<ref bean="people"/>-->
+            </set>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="姓名" value="南成如"/>
+                <!--<entry key="人员" value-ref="people"/>-->
+            </map>
+        </property>
+        
+        <property name="properties">
+            <props>
+                <prop key="路径">G:</prop>
+            </props>
+        </property>
+
+    </bean>
+</beans>
