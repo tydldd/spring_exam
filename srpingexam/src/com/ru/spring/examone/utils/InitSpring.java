@@ -19,7 +19,7 @@ public class InitSpring {
 
     public static class InnerClass{
         private static ApplicationContext context =
-                new ClassPathXmlApplicationContext("/resources/SpringConfigfiles/spring.xml");
+                new ClassPathXmlApplicationContext("/spring/applicationContext.xml");
     }
 
     public static ApplicationContext getApplicationContext() {

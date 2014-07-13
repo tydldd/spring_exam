@@ -3,7 +3,9 @@ package com.ru.spring.examone.action;
 import com.ru.spring.examone.entry.Student;
 import com.ru.spring.examone.service.SpringInitBeanSerInter;
 import com.ru.spring.examone.utils.InitSpring;
+
 import org.apache.log4j.Logger;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 
 /**
@@ -24,7 +26,7 @@ public class SpringInitBeanAction {
         log.info("sping action 初始化");
     }
 
-    //@Log4jTest
+    @Test
     public void test1(){
         ApplicationContext context = InitSpring.getApplicationContext();
         Student student = (Student) context.getBean("student");
